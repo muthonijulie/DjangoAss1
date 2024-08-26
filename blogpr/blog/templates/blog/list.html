@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width,initial-scale-1.0" />
+    <title>Blog:List of posts</title>
+  </head>
+  <body>
+    <h1>List of posts</h1>
+    <div>
+      <ol>
+        {% for post in posts %}
+        <li>
+          <p>Title:<a href="{% url 'detail' post.id%}">{{post.title}}</a></p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </body>
+</html>
