@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+<section class="vh-110 gradient-custom-2">
+  <div class="container py-5">
+    <h1 class="mb-4">Post Delete Page</h1>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          Are you sure you want to delete "{{ post.title }}"?
+        </h3>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="{% url 'delete' post.id %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger me-2">
+            Yes, Delete Task
+          </button>
+          <a href="{% url 'list' %}" class="btn btn-primary">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %} {% comment %}
+<h1>Post delete page</h1>
+<h3>Are you sure you want to delete "{{post.title}}"?</h3>
+<form method="POST" action="{% url 'delete' post.id %}">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-warning me-2">Yes, delete post</button>
+</form>
+<a href="{%url 'list' %}">Back to post list</a> {% endcomment %}

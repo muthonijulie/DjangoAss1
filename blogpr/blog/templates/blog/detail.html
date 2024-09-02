@@ -1,18 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width-device-width,initial-scale-1.0" />
-    <title>Blog:Detail view</title>
-  </head>
-  <body>
-    <h1>Post item</h1>
-    <div>
-      <p>Title: {{post.title}}</p>
-      <p>Content:{{post.content}}</p>
-      <p>Author:{{post.author}}</p>
-      <p>Date created:{{post.date_created}}</p>
-   
-    <a href="{%url 'list' %}">Back to post list</a>
-  </body>
-</html>
+{% extends 'base.html' %} {% block content %}
+
+<section class="vh-110 gradient-custom-2">
+  <div class="container py-5">
+    <h1 class="mb-4">Post Detail Page</h1>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Post: {{ post.title }}</h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Content:</strong> {{ post.content }}</p>
+        <p class="card-text"><strong>Author:</strong> {{ post.author }}</p>
+        <p class="card-text">
+          <strong>Created On:</strong> {{ post.date_created }}
+        </p>
+
+        <div class="mt-4">
+          <h3 class="mb-3">Actions</h3>
+          <a href="{% url 'update' post.id %}" class="btn btn-primary me-2"
+            >Update</a
+          >
+          <a href="{% url 'delete' post.id %}" class="btn btn-danger me-2"
+            >Delete</a
+          >
+          <div class="mt-4">
+            <a href="{% url 'list' %}" class="btn btn-primary me-2"
+              >Back to Task List</a
+            >
+          </div>
+          {% comment %}
+          <a href="{% url 'create' %}" class="btn btn-primary"
+            >Create a new task</a
+          >
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

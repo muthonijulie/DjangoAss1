@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/muthoni/Desktop/present/Project/Janja program/Assignments/Django assignments/DjangoAss1/blogpr/.lily/bin/python" "$0" "$@"
+'''exec' "/home/muthoni/Desktop/present/Project/Janja program/Assignments/Django assignments/DjangoAss1/blogpr/.lily/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

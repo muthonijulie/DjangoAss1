@@ -27,4 +27,9 @@ Once logged in, you'll see the Django admin dashboard. You can manage posts by c
 
 Click "Add" next to Posts. Fill in the fields (title, content, author) and click "Save".
 Click on the title of the post you want to edit, make changes, and click "Save".
+
 In the list of posts, select the post you want to delete by checking the box next to them. Choose "Delete selected posts" from the action dropdown and confirm.
+An attention-grabbing headline. A good blog post is about one topic, one story, one idea. ...
+A captivating lead paragraph. You know how much first impressions matter, right? ...
+Interesting supporting points. This is the body of the article. ...
+A compelling call-to-action.

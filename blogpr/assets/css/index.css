@@ -1,0 +1,117 @@
+body{
+    background-color:#6C946F;
+    font-family: sans-serif;
+}
+.vh-110 {
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-container {
+    margin-top: 20px;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #FFD35A;
+}
+.card-header {
+    background-color: #FFD35A;
+    color: #FFA823;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+    color: #FFA823;
+    margin-bottom: 20px;
+    font-weight:bolder;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #FFA823;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #FFA823;
+}
+
+.table th {
+    background-color: #FFA823;
+    color: #DC0083;
+}
+
+.table a {
+    color: black;
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+.btn-danger {
+    display:inline-block;
+    margin-top: 20px;
+    background-color: red;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+   
+}
+
+.btn-primary {
+    display:inline-block;
+    margin-top: 20px;
+    background-color: #DC0083;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #DC0083;
+
+}
+@media (max-width: 767.98px) {
+    .card-header, .card-body {
+        padding: 15px;
+    }
+    .table th, .table td {
+        font-size: 0.9rem;
+    }
+}
+
+footer{
+    background-color: #343a40;
+    color:#ffffff;
+    text-align: center;
+}
