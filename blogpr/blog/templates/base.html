@@ -16,9 +16,15 @@
   </head>
   <body>
     <header>
+      {% comment %}
       <h1>{{user.username}} is authenticated</h1>
+      {% endcomment %}
       <nav>
-        <ul>
+        <ul class="navbr">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="active" href="#about">About</a></li>
           {% if user.is_authenticated %}
           <li>
             <a href="{% url 'auth:logout' %}" class="my-3 p-3 btn btn-danger"
