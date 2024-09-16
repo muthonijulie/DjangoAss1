@@ -3,17 +3,22 @@
 <section class="vh-110 gradient-custom-2">
   <div class="container py-5">
     <h1 class="mb-4">Post Detail Page</h1>
-    <div class="card">
-      <div class="card-header">
-        <h2 class="card-title">Post: {{ post.title }}</h2>
+    {% comment %} <div class="card">
       </div>
       <div class="card-body">
         <p class="card-text"><strong>Content:</strong> {{ post.content }}</p>
         <p class="card-text"><strong>Author:</strong> {{ post.author }}</p>
         <p class="card-text">
           <strong>Created On:</strong> {{ post.date_created }}
-        </p>
+        </p> {% endcomment %}
+           <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
 
+    <div class="image">
+        {% for image in post.images.all %}
+        <img src="{{ post.image.url }}" alt="Post Image" style="max-width: 300px;">
+        {% endfor %}
+    </div>
         <div class="mt-4">
           <h3 class="mb-3">Actions</h3>
           <a href="{% url 'update' post.id %}" class="btn btn-primary me-2"

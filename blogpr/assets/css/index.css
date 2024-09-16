@@ -1,14 +1,11 @@
 body{
     background-color:#6C946F;
     font-family: sans-serif;
+    height:100vh;
+   
 }
-.vh-110 {
-    height: 110vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card-container {
+
+/* .card-container {
     margin-top: 20px;
 }
 
@@ -21,7 +18,7 @@ body{
     color: #FFA823;
     padding: 20px;
     font-size: 1.5rem;
-}
+} */
 
 
 h1 {
@@ -31,7 +28,13 @@ h1 {
     margin-bottom: 20px;
     font-weight:bolder;
 }
+.image{
+    display: block;
+    width: 100%;
+    max-width: 800px;
 
+}
+/* 
 .table-responsive {
     margin-top: 20px;
 }
@@ -67,7 +70,7 @@ h1 {
 
 .table a:hover {
     text-decoration: underline;
-}
+} */
 
 .badge {
     padding: 10px;
