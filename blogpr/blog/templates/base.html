@@ -16,9 +16,12 @@
   </head>
   <body>
     <header>
-      <h1>{{user.username}} is authenticated</h1>
       <nav>
-        <ul>
+        <ul class="navbr">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
           {% if user.is_authenticated %}
           <li>
             <a href="{% url 'auth:logout' %}" class="my-3 p-3 btn btn-danger"
@@ -34,7 +37,12 @@
           {% endif %}
         </ul>
       </nav>
+      <h1>
+        {% if user.is_authenticated %} Welcome, {{ user.username }}! {% else %}
+        Welcome to FOODIE BLOGS! {% endif %}
+      </h1>
     </header>
+
     {% block content %} {% endblock content %}
     <footer>Copyrights| Janja Programmers</footer>
   </body>

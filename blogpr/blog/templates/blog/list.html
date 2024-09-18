@@ -1,8 +1,7 @@
-{% extends 'base.html' %} {% block content %} 
+{% extends 'base.html' %} {% block content %} {% load static %}
   <section class="vh-110 gradient-custom-2">
   <div class="container py-5">
-   
-    <h1 class="mb-4">POSTS</h1>
+  
     {% comment %} <div class="card">
       <div class="card-body">
         <div class="table-responsive">
@@ -19,6 +18,8 @@
             
             {% comment %} <img class="image" src="{{post.image.url}}"
             alt="{{post.title}}"/> {% endcomment %}
+              
+       
               {% for post in posts %}
               <tr class="fw-normal">
                 <th scope="row" class="col-1">
@@ -29,7 +30,14 @@
                     href="{% url 'detail' post.id %}"
                     class="border-0 align-middle text-decoration-none"
                   >
+                     <img src="{% static 'images/images (2).jpeg' %}" alt="Image Description" />
+   
                     {{ post.title }}
+                    
+    {% comment %} <img src="{% static 'images/image1-10.webp' %}" alt="Image Description" /> {% endcomment %}
+  {% comment %} <img src="{% static 'images/images (3).jpeg' %}" alt="Image Description" />
+    <img src="{% static 'images/images (5).jpeg' %}" alt="Image Description" /> {% endcomment %}
+
                   </a>
                 </td>
                 <td class="align-middle col-2">{{ post.author }}</td>
