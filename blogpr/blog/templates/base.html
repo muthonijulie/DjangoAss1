@@ -22,25 +22,40 @@
           <li><a href="#news">News</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#about">About</a></li>
+
           {% if user.is_authenticated %}
           <li>
             <a href="{% url 'auth:logout' %}" class="my-3 p-3 btn btn-danger"
               >Logout</a
             >
           </li>
-          {%else %}
+          {% else %}
           <li>
-            <a href="{% url 'auth:login' %}" class="my-3 p-3 btn btn-primary"
+          <a href="{% url 'auth:login' %}" class="my-3 p-3 btn btn-primary"
               >Login</a
             >
+         
           </li>
+     
+        <li>
+         <a href="{% url 'auth:register' %}" class="my-3 p-3 btn btn-primary"
+              >Register</a
+            >
+            </li>
           {% endif %}
+          <h1>
+           
         </ul>
+        
       </nav>
       <h1>
-        {% if user.is_authenticated %} Welcome, {{ user.username }}! {% else %}
-        Welcome to FOODIE BLOGS! {% endif %}
-      </h1>
+         {% if user.is_authenticated %} Welcome, {{ user.username }}! 
+       {% else%} Welcome to FOODIE BLOGS! {% endif %}
+          </h1>
+
+      <a href="{% url 'create' %}" class="btn btn-primary p-3 text-center my-3"
+        >Create a new task</a
+      >
     </header>
 
     {% block content %} {% endblock content %}

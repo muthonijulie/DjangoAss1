@@ -30,14 +30,14 @@
                     href="{% url 'detail' post.id %}"
                     class="border-0 align-middle text-decoration-none"
                   >
-                     <img src="{% static 'images/images (2).jpeg' %}" alt="Image Description" />
+                     
    
                     {{ post.title }}
                     
     {% comment %} <img src="{% static 'images/image1-10.webp' %}" alt="Image Description" /> {% endcomment %}
   {% comment %} <img src="{% static 'images/images (3).jpeg' %}" alt="Image Description" />
     <img src="{% static 'images/images (5).jpeg' %}" alt="Image Description" /> {% endcomment %}
-
+<img src="{% static 'images/images (2).jpeg' %}" alt="Image Description" />
                   </a>
                 </td>
                 <td class="align-middle col-2">{{ post.author }}</td>
@@ -78,9 +78,7 @@
         </li>
         {% endfor %}
       </ol> {% endcomment %}
-      <a href="{% url 'create' %}" class="btn btn-primary p-3 text-center my-3"
-        >Create a new task</a
-      >
+      
       </div>
       </div>
       </div>
