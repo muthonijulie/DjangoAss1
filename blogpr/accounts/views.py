@@ -10,9 +10,9 @@ def register(request):
             user=form.save()
             login(request,user)
             return redirect('list')
-        else :
+    else :
               form=UserCreationForm()
-        return render(request,'accounts/register.html',{'form':form})
+    return render(request,'accounts/register.html',{'form':form})
     
 def user_login(request):
             if request.method=='POST':

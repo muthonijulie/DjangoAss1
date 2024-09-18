@@ -5,22 +5,6 @@ body{
    
 }
 
-/* .card-container {
-    margin-top: 20px;
-}
-
-.card-body {
-    padding: 20px;
-    background-color: #FFD35A;
-}
-.card-header {
-    background-color: #FFD35A;
-    color: #FFA823;
-    padding: 20px;
-    font-size: 1.5rem;
-} */
-
-
 h1 {
     font-family: sans-serif;
     text-align: center;
@@ -29,49 +13,6 @@ h1 {
     font-weight:bolder;
 }
 
-/* 
-.table-responsive {
-    margin-top: 20px;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table th,
-.table td {
-    padding: 12px;
-    text-align: left;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #FFA823;
-}
-
-.table-hover tbody tr:hover {
-    background-color: #FFA823;
-}
-
-.table th {
-    background-color: #FFA823;
-    color: #DC0083;
-}
-
-.table a {
-    color: black;
-    text-decoration: none;
-}
-
-.table a:hover {
-    text-decoration: underline;
-} */
-/* 
-.badge {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 4px;
-} */
 .navbr {
   list-style-type: none;
   margin: 0;
@@ -145,4 +86,28 @@ footer{
     bottom:0;
     width:100%;
     padding: 10px;
+}
+
+form{
+    max-width: 500px;
+    margin:0 auto;
+}
+form label{
+    font-weight: bold;
+}
+form input{
+    width: 100%;
+    padding:10px;
+    margin: 10px 0;
+
+}
+form button{
+    background-color: #DC0083;
+    border:none ;
+    display: block;
+    cursor: pointer;
+    padding: 3px;
+    width: 30%;
+    display:block;
+    margin: 0 auto;
 }

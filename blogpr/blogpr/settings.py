@@ -137,6 +137,4 @@ LOGIN_URL = '/auth/login/'
 
 
 
-
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

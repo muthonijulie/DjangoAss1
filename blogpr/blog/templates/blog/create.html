@@ -2,9 +2,7 @@
 
 <section class="vh-110 gradient-custom-2">
   <div class="container py-5">
-    <h1 class="mb-4">Post</h1>
-    <div class="card">
-      <div class="card-header">
+  
         <form method="POST" action="{% url 'create' %}">
           {% csrf_token %}
           <div class="row">
@@ -33,9 +31,7 @@
     </div>
     </div>
     </form>
-    </div>
-    </div>
-    </div>
+   
     </section>
    {% endblock content %}
  
