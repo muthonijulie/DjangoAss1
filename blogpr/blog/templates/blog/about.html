@@ -1,0 +1,81 @@
+{% extends 'base.html' %}{% block content %} {% load static %}
+<section class="vh-110 gradient-custom-2">
+  <div class="container py-5">
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="aboutcnt">
+            <div class="about-col-2">
+              <h1 class="hd1">About Me</h1>
+
+              <p class="row1">
+                Hi, I'm Elizabeth! Welcome to my blog. I'm passionate about
+                technology, coding , cooking and love sharing insights, tips,
+                and experiences.I'm currently a student at Dedan Kimathi
+                University of Technology, exploring the world of technology.
+                This blog is my space to share what I'm learning and connect
+                with others who share similar interests. Thanks for stopping by!
+                Feel free to contact me or follow me on social media.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contacts">
+        <div class="row">
+          <div class="contact-bottom">
+            <h1 class="sub-title">CONTACT INFO</h1>
+            <p><span>Email:</span>bethjulius6@gmail.com</p>
+            <p><span>Phone number:</span>0712983721</p>
+          </div>
+          <div class="contact-left">
+            <form>
+              <fieldset>
+                <legend>CONTACT ME</legend>
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Your Email"
+                  required
+                />
+                <textarea
+                  name="Message"
+                  rows="6"
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit">SUBMIT</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <a href="https://www.instagram.com/_.muthoniiiiii/">
+          <img
+            src="{% static 'assets/images/instagram.jpeg' %}"
+            alt="Instagram"
+          />
+          Instagram
+        </a>
+
+        <a href="https://web.facebook.com/elizabeth.muthoni.39395033">
+          <img src="{% static 'assets/images/facebook.png' %}" alt="Facebook" />
+          Facebook
+        </a>
+
+        <a href="https://x.com/MuthoniJul42610?t=igm6IbCs5pQ_wCNv2DLWFw&s=09">
+          <img src="{% static 'assets/images/X.png' %}" alt="Twitter" />
+          Twitter
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
