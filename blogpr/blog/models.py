@@ -6,7 +6,7 @@ class Post(models.Model):
     content=models.TextField(max_length=600)
     author=models.CharField(max_length=100)
     date_created =models.DateField()
-    image=models.ImageField(upload_to='assets/images/')
+    image=models.ImageField(upload_to='media/images',blank=True,null=True)
 
 def __str__(self):
          return f"Title:{self.title}\nAuthor{self.author}\n{self.image}"

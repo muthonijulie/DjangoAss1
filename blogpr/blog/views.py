@@ -5,12 +5,11 @@ from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.contrib.auth.decorators import login_required
 
 
-
-
 # Create your views here.
 def post_list(request):
     posts=Post.objects.all()
     paginator=Paginator(posts,4,orphans=4,allow_empty_first_page=True)
+   
     page=request.GET.get('page')
     try:
         paginated_posts=paginator.page(page)
@@ -26,7 +25,7 @@ def post_detail(request,id):
 @login_required
 def post_create(request):
     if request.method == 'POST':
-        form=PostCreateForm(request.POST)
+        form=PostCreateForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return redirect('list')
@@ -38,7 +37,7 @@ def post_create(request):
 def post_update(request,id):
     post=get_object_or_404(Post,id=id)
     if request.method=='POST':
-        form=PostCreateForm(request.POST,instance=post)
+        form=PostCreateForm(request.POST,request.FILES,instance=post)
         if form.is_valid():
             form.save()
             return redirect('list')

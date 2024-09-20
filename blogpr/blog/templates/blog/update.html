@@ -2,9 +2,7 @@
 
 <section class="vh-110 gradient-custom-2">
   <div class="container py-5">
-    <h1 class="mb-4">Post Update Page</h1>
-    <div class="card">
-      <div class="card-header">
+    
         <form method="POST" action="{% url 'update' post.id %}">
           {% csrf_token %}
           <div class="row">
@@ -18,15 +16,11 @@
             <div class="col-4">
               <button type="submit" class="btn btn-primary">Update</button>
             </div>
-            <div class="col-4">
-              <a href="{% url 'list' %}" class="btn btn-primary"
-                >Back to list</a
-              >
+            
             </div>
           </div>
         </form>
-      </div>
-    </div>
+     
   </div>
 </section>
 {% endblock content %} {% comment %}
