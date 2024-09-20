@@ -55,3 +55,5 @@ def post_delete(request,id):
     
     return render(request,'blog/delete.html',{'post':post})
 
+def post_about(request):
+    return render(request,'blog/about.html')

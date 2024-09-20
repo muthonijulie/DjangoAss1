@@ -118,3 +118,40 @@ form button{
   object-fit:cover;
   display:block;
 }
+
+  .contact-left,.contact-bottom{
+    flex-basis:35%;
+    padding:10px;
+  }
+  
+  .contact-left p{
+    margin-top: 30px;
+  }
+  #contacts .row {
+  display: flex;              
+  justify-content: space-between; 
+  align-items: flex-start;     
+}
+.right {
+  display: flex;
+  gap: 15px; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.right a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000; 
+}
+
+.right a img {
+  margin-right: 5px; 
+  width: 24px; 
+}
+
+.right a:hover {
+  color: #007bff;
+}
+

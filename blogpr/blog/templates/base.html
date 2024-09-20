@@ -19,9 +19,9 @@
       <nav>
         <ul class="navbr">
           <li><a href="{% url 'list' %}">Home</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
+          
+          <li><a href="{% url 'about' %}">Contact</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
 
           {% if user.is_authenticated %}
           <li>
