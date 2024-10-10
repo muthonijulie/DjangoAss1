@@ -1,14 +1,12 @@
 body{
-    background-color:whitesmoke;
+    background-color:#16423C;
     font-family: sans-serif;
-   
-   
 }
 
 h1 {
     font-family: sans-serif;
     text-align: center;
-    color: #FFA823;
+    color: #C4DAD2;
     margin-bottom: 20px;
     font-weight:bolder;
 }
@@ -18,8 +16,9 @@ h1 {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: flex-end;
-  background-color:#FFA823;
+  justify-content:flex-end;
+  background-color:#6A9C89;
+  align-items: center;
 }
 
 .navbr li {
@@ -27,7 +26,7 @@ h1 {
 }
 
 .navbr li a {
-  color: white;
+  color: #E9EFEC;
   text-align: center;
   padding: 10px 16px;
   text-decoration: none;
@@ -36,19 +35,43 @@ h1 {
 }
 
 .navbr li a:hover {
-  background-color: #ddd;
+  background-color: #C4DAD2;
   color: black;
 }
 
 .navbr li a.active {
-  background-color: #4CAF50;
+  background-color: #C4DAD2;
   color: white;
+}
+.search-container {
+   display:flex;
+   align-items: center;
+   flex-grow: 1;
+   width:500px;
+   float: right;
+   overflow:hidden;
+}
+
+.search-container input[type="text"] {
+  padding: 5px;
+  font-size: 10px;
+  border: none;
+  flex:1;
+
+}
+
+.search-container button {
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  float:right;
+  
 }
 
 .btn-danger {
     display:inline-block;
     margin-top: 20px;
-    background-color: red;
+    background-color: #6A9C89;
     color: black;
     padding: 10px 15px;
     border-radius: 4px;
@@ -60,7 +83,7 @@ h1 {
 .btn-primary {
     display:inline-block;
     margin-top: 20px;
-    background-color: #DC0083;
+    background-color: #6A9C89;
     color: black;
     padding: 10px 15px;
     border-radius: 4px;
@@ -68,18 +91,31 @@ h1 {
     text-decoration: none;
 }
 
-.btn-primary:hover {
-    background-color: #DC0083;
+.btn-primary:hover,.btn-danger:hover {
+    background-color: #E9EFEC;
 
 }
 @media (max-width: 767.98px) {
    .navbr{
     width:100%;
    }
+   .navbar .search-container {
+    float: none;
+  }
+  .navbar a, .navbar input[type=text], .navbar .search-container button {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .navbar input[type=text] {
+    border: 1px solid #ccc;  
+  }
 }
 
 footer{
-    background-color: #343a40;
+    background-color: #6A9C89;
     color:#ffffff;
     text-align: center;
     position: fixed;
@@ -102,7 +138,7 @@ form input{
 
 }
 form button{
-    background-color: #DC0083;
+    background-color: #C4DAD2;
     border:none ;
     display: inline-block;
     cursor: pointer;
@@ -152,6 +188,6 @@ form button{
 }
 
 .right a:hover {
-  color: #007bff;
+  color: #E9EFEC;
 }
 

@@ -1,3 +1,4 @@
+from datetime import timezone
 from django.shortcuts import render,get_object_or_404,redirect 
 from .models import Post
 from .forms import PostCreateForm
@@ -31,7 +32,8 @@ def post_create(request):
             return redirect('list')
     else:
             form=PostCreateForm()
-           
+          
+
     return render(request,'blog/create.html',{'form':form})
 @login_required
 def post_update(request,id):
@@ -57,3 +59,17 @@ def post_delete(request,id):
 
 def post_about(request):
     return render(request,'blog/about.html')
+
+def post_index(request):
+    posts=Post.objects.filter(date_created=timezone.now())
+    return render(request,'blog/list.html',{'posts':posts})
+def post_search(request):
+     search_query=request.GET.get('q')
+    
+     post=Post.objects.filter(title__icontains=search_query).order_by('date_created')
+     context={
+          'post':post,
+          'search_query':search_query,
+     }
+     return render(request,'blog/list.html',context)
+    
