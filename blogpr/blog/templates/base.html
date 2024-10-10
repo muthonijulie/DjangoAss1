@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Blog:List of posts</title>
   </head>
@@ -18,34 +19,44 @@
     <header>
       <nav>
         <ul class="navbr">
+        <div class="search-container">
+    <form method="GET" action="{% url 'search' %}">
+      <input type="text" placeholder="Search.." name="search"/>
+       <button class="fa fa-search" type="submit">Search</button>
+    </form>
+  </div> 
+     
           <li><a href="{% url 'list' %}">Home</a></li>
           
-          <li><a href="{% url 'about' %}">Contact</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-
+         
+  <li><a href="{% url 'create' %}" 
+        >Create a new post</a
+      ></li>
           {% if user.is_authenticated %}
           <li>
-            <a href="{% url 'auth:logout' %}" class="my-3 p-3 btn btn-danger"
+            <a href="{% url 'auth:logout' %}" 
               >Logout</a
             >
           </li>
           {% else %}
           <li>
-          <a href="{% url 'auth:login' %}" class="my-3 p-3 btn btn-primary"
+          <a href="{% url 'auth:login' %}" 
               >Login</a
             >
          
           </li>
      
         <li>
-         <a href="{% url 'auth:register' %}" class="my-3 p-3 btn btn-primary"
+         <a href="{% url 'auth:register' %}" 
               >Register</a
             >
             </li>
           {% endif %}
           <h1>
-           
+         
         </ul>
+
         
       </nav>
       <h1>
@@ -53,9 +64,7 @@
        {% else%} Welcome to FOODIE BLOGS! {% endif %}
           </h1>
 
-      <a href="{% url 'create' %}" class="btn btn-primary p-3 text-center my-3"
-        >Create a new post</a
-      >
+    
     </header>
 
     {% block content %} {% endblock content %}

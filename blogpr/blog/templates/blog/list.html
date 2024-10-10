@@ -5,14 +5,9 @@
       {% for post in posts %}
 
       <div class="col-4 mb-4">
-        <a
-          href="{% url 'detail' post.id %}"
+        <a href="{% url 'detail' post.id %}"
           class="border-0 align-middle text-decoration-none"
         >
-          {{ post.title }}
-     
-
-        <p class="align-middle col-2">{{ post.author }}</p>
         {% if post.image %}
         <img
           src="{{post.image.url}}"
@@ -21,10 +16,16 @@
       
         />
         {% endif %}
-        <p class="align-middle col-2">
-          <span class="badge bg-success fs-6">{{ post.date_created}}</span>
-          </p>
-          </a>
+        
+         
+          {{ post.title }}
+     </a>
+  
+
+        <p class="align-middle" style="font-size:20px; font-weight:700" > By {{ post.author }} on {{post.date_created|date:"M,d Y"}}</p>
+        
+        
+          
           </div>
           {% endfor %}
  
@@ -33,7 +34,7 @@
           <span class="step-links">
             {% if posts.has_previous %}
             <a href="?page=1">&laquo;First</a>
-            <a href="?page={{posts.previous_page_number}}">Previous</a>
+            <a href="?page={{posts.previous_page_number}}">Previous<3a>
             {% endif %}
 
             <span class="current">
