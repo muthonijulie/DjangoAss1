@@ -20,10 +20,15 @@
       <nav>
         <ul class="navbr">
         <div class="search-container">
-    <form method="GET" action="{% url 'search' %}">
-      <input type="text" placeholder="Search.." name="search"/>
-       <button class="fa fa-search" type="submit">Search</button>
-    </form>
+    <form method="POST" action="{% url 'search' %}">
+            {% csrf_token %}
+            <input
+              type="text"
+              name="search_query"
+              placeholder="Search blog"
+            />
+            <button class="fa fa-search" type="submit">Search</button>
+          </form>
   </div> 
      
           <li><a href="{% url 'list' %}">Home</a></li>

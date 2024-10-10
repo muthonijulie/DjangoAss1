@@ -6,6 +6,7 @@ from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.contrib.auth.decorators import login_required
 
 
+
 # Create your views here.
 def post_list(request):
     posts=Post.objects.all()
@@ -64,12 +65,14 @@ def post_index(request):
     posts=Post.objects.filter(date_created=timezone.now())
     return render(request,'blog/list.html',{'posts':posts})
 def post_search(request):
-     search_query=request.GET.get('q')
+     search_query=request.POST.get('search_query','')
     
-     post=Post.objects.filter(title__icontains=search_query).order_by('date_created')
+     posts=Post.objects.filter(title__icontains=search_query)
+
      context={
-          'post':post,
+          'posts':posts,
           'search_query':search_query,
      }
-     return render(request,'blog/list.html',context)
+     return render(request,'blog/search.html',context)
+   
     

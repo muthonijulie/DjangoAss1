@@ -22,7 +22,7 @@
      </a>
   
 
-        <p class="align-middle" style="font-size:20px; font-weight:700" > By {{ post.author }} on {{post.date_created|date:"M,d Y"}}</p>
+        <p class="align-middle" style="font-size:20px; font-weight:700; color:#6A9C89" > By {{ post.author }} on {{post.date_created|date:"M,d Y"}}</p>
         
         
           
@@ -34,7 +34,7 @@
           <span class="step-links">
             {% if posts.has_previous %}
             <a href="?page=1">&laquo;First</a>
-            <a href="?page={{posts.previous_page_number}}">Previous<3a>
+            <a href="?page={{posts.previous_page_number}}">Previous</a>
             {% endif %}
 
             <span class="current">
